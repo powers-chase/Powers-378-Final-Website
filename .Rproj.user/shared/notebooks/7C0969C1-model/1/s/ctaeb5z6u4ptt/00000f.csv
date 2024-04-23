@@ -1,0 +1,11 @@
+"0",""
+"0","## Save to Board"
+"0","from pins import board_folder"
+"0","from vetiver import vetiver_pin_write"
+"0",""
+"0","model_board = board_folder(""/data/model"", allow_pickle_read = True)"
+"0","vetiver_pin_write(model_board, v)"
+"2","Traceback (most recent call last):
+  File ""<string>"", line 1, in <module>
+NameError: name 'v' is not defined
+"

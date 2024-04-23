@@ -1,0 +1,249 @@
+install.packages("renv")
+=======
+renv::init()
+{renv}
+renv::init()
+## Penguin Size and Mass by Sex and Species
+library(palmerpenguins)
+install.packages("renv")
+install.packages("palmerpenguins")
+install.packages("dplyr")
+install.packages("(ggplot2)")
+renv.lock
+renv.lock
+renv::init()
+install.packages("palmerpenguins")
+install.packages("dplyr")
+install.packages("(ggplot2)")
+## Penguin Size and Mass by Sex and Species
+library(palmerpenguins)
+library(dplyr)
+library(ggplot2)
+install.packages("ggplot2")
+## Penguin Size and Mass by Sex and Species
+library(palmerpenguins)
+library(dplyr)
+library(ggplot2)
+df <- palmerpenguins::penguins
+df %>%
+group_by(species, sex) %>%
+summarise(
+across(
+where(is.numeric),
+\(x) mean(x, na.rm = TRUE)
+)
+) %>%
+knitr::kable()
+## Penguin Size vs Mass by Species
+df %>%
+ggplot(aes(x = bill_length_mm, y = body_mass_g, color = species)) +
+geom_point() +
+geom_smooth(method = "lm")
+renv::snapshot()
+install.packages("vetiver")
+from vetiver import VetiverModel
+reticulate::repl_python()
+reticulate::repl_python()
+library(reticulate)
+use_virtualenv("C:\Users\C25Chase.Powers\env\Scripts\python.exe", required = TRUE)
+from palmerpenguins import penguins
+from pandas import get_dummies
+import numpy as np
+from sklearn.linear_model import LinearRegression
+from sklearn import preprocessing
+## Get Data
+df = penguins.load_penguins().dropna()
+df.head(3)
+## Define Model and Fit
+X = get_dummies(df[['bill_length_mm', 'species', 'sex']], drop_first = True)
+y = df['body_mass_g']
+## Get some information
+print(f"R^2 {model.score(X,y)}")
+print(f"Intercept {model.intercept_}")
+print(f"Columns {X.columns}")
+print(f"Coefficients {model.coef_}")
+reticulate::repl_python()
+from palmerpenguins import penguins
+from pandas import get_dummies
+import numpy as np
+from sklearn.linear_model import LinearRegression
+from sklearn import preprocessing
+## Get Data
+df = penguins.load_penguins().dropna()
+df.head(3)
+## Define Model and Fit
+X = get_dummies(df[['bill_length_mm', 'species', 'sex']], drop_first = True)
+y = df['body_mass_g']
+## Get some information
+print(f"R^2 {model.score(X,y)}")
+print(f"Intercept {model.intercept_}")
+print(f"Columns {X.columns}")
+print(f"Coefficients {model.coef_}")
+## Penguin Size and Mass by Sex and Species
+{r}
+## Penguin Size and Mass by Sex and Species
+library(palmerpenguins)
+library(dplyr)
+library(ggplot2)
+df <- palmerpenguins::penguins
+df %>%
+group_by(species, sex) %>%
+summarise(
+across(
+where(is.numeric),
+\(x) mean(x, na.rm = TRUE)
+)
+) %>%
+knitr::kable()
+## Penguin Size vs Mass by Species
+df %>%
+ggplot(aes(x = bill_length_mm, y = body_mass_g, color = species)) +
+geom_point() +
+geom_smooth(method = "lm")
+## Penguin Size and Mass by Sex and Species
+library(palmerpenguins)
+library(dplyr)
+library(ggplot2)
+df <- palmerpenguins::penguins
+df %>%
+group_by(species, sex) %>%
+summarise(
+across(
+where(is.numeric),
+\(x) mean(x, na.rm = TRUE)
+)
+) %>%
+knitr::kable()
+## Penguin Size vs Mass by Species
+df %>%
+ggplot(aes(x = bill_length_mm, y = body_mass_g, color = species)) +
+geom_point() +
+geom_smooth(method = "lm")
+reticulate::repl_python()
+from palmerpenguins import penguins
+from pandas import get_dummies
+import numpy as np
+from sklearn.linear_model import LinearRegression
+from sklearn import preprocessing
+## Get Data
+df = penguins.load_penguins().dropna()
+df.head(3)
+## Get Data
+df = penguins.load_penguins().dropna()
+df.head(3)
+## Get Data
+df = penguins.load_penguins().dropna()
+df.head(3)
+## Get some information
+print(f"R^2 {model.score(X,y)}")
+print(f"Intercept {model.intercept_}")
+print(f"Columns {X.columns}")
+print(f"Coefficients {model.coef_}")
+## Get Data
+df = penguins.load_penguins().dropna()
+df.head(3)
+## Define Model and Fit
+X = get_dummies(df[['bill_length_mm', 'species', 'sex']], drop_first = True)
+y = df['body_mass_g']
+model = LinearRegression().fit(X, y)
+## Get some information
+print(f"R^2 {model.score(X,y)}")
+print(f"Intercept {model.intercept_}")
+print(f"Columns {X.columns}")
+print(f"Coefficients {model.coef_}")
+from palmerpenguins import penguins
+from pandas import get_dummies
+import numpy as np
+from sklearn.linear_model import LinearRegression
+from sklearn import preprocessing
+from pandas import get_dummies
+import numpy as np
+from sklearn.linear_model import LinearRegression
+from sklearn import preprocessing
+## Get Data
+import duckdb
+con = duckdb.connect('my-db.duckdb')
+df = con.execute("SELECT * FROM penguins").fetchdf().dropna()
+con.close()
+df.head(3)
+## Define Model and Fit
+X = get_dummies(df[['bill_length_mm', 'species', 'sex']], drop_first = True)
+y = df['body_mass_g']
+model = LinearRegression().fit(X, y)
+## Get some information
+print(f"R^2 {model.score(X,y)}")
+print(f"Intercept {model.intercept_}")
+print(f"Columns {X.columns}")
+print(f"Coefficients {model.coef_}")
+## Turn into Vetiver Mode
+from vetiver import VetiverModel
+v = VetiverModel(model, model_name='penguin_model', prototype_data=X)
+## Save to Board
+from pins import board_folder
+from vetiver import vetiver_pin_write
+model_board = board_folder("/data/model", allow_pickle_read = True)
+vetiver_pin_write(model_board, v)
+## Turn model into API
+from vetiver import VetiverAPI
+app = VetiverAPI(v, check_prototype = True)
+quit
+install.packages("renv")
+renv::init()
+source <.venv>/Scripts/activate
+<.venv>/Scripts/activate
+library(reticulate)
+reticulate::repl_python()
+from pandas import get_dummies
+import numpy as np
+from sklearn.linear_model import LinearRegression
+from sklearn import preprocessing
+quit
+renv::snapshot()
+## Penguin Size and Mass by Sex and Species
+library(palmerpenguins)
+library(dplyr)
+library(ggplot2)
+df <- palmerpenguins::penguins
+df %>%
+group_by(species, sex) %>%
+summarise(
+across(
+where(is.numeric),
+\(x) mean(x, na.rm = TRUE)
+)
+) %>%
+knitr::kable()
+## Penguin Size vs Mass by Species
+df %>%
+ggplot(aes(x = bill_length_mm, y = body_mass_g, color = species)) +
+geom_point() +
+geom_smooth(method = "lm")
+reticulate::repl_python()
+from pandas import get_dummies
+import numpy as np
+from sklearn.linear_model import LinearRegression
+from sklearn import preprocessing
+quit
+library(reticulate)
+reticulate::repl_python()
+from pandas import get_dummies
+import numpy as np
+from sklearn.linear_model import LinearRegression
+from sklearn import preprocessing
+from pandas import get_dummies
+import numpy as np
+from sklearn.linear_model import LinearRegression
+from sklearn import preprocessing
+library(reticulate)
+library(reticulate)
+reticulate::repl_python()
+from pandas import get_dummies
+import numpy as np
+from sklearn.linear_model import LinearRegression
+from sklearn import preprocessing
+## Get Data
+import duckdb
+con = duckdb.connect('my-db.duckdb')
+df = con.execute("SELECT * FROM penguins").fetchdf().dropna()
+con.close()
+df.head(3)

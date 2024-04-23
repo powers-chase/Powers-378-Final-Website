@@ -1,0 +1,22 @@
+"0",""
+"0","## Get some information"
+"0","print(f""R^2 {model.score(X,y)}"")"
+"2","Traceback (most recent call last):
+  File ""<string>"", line 1, in <module>
+NameError: name 'model' is not defined
+"
+"0","print(f""Intercept {model.intercept_}"")"
+"2","Traceback (most recent call last):
+  File ""<string>"", line 1, in <module>
+NameError: name 'model' is not defined
+"
+"0","print(f""Columns {X.columns}"")"
+"2","Traceback (most recent call last):
+  File ""<string>"", line 1, in <module>
+NameError: name 'X' is not defined
+"
+"0","print(f""Coefficients {model.coef_}"")"
+"2","Traceback (most recent call last):
+  File ""<string>"", line 1, in <module>
+NameError: name 'model' is not defined
+"
