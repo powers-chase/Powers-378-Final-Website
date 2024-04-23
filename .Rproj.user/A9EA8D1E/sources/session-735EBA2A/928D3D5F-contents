@@ -1,0 +1,12 @@
+---
+title: "Powers Math 378 Porject"
+format:
+  html:
+    code-fold: false  # Optional: enable code folding instead of hiding
+    echo: false       # Hide code globally
+    message: false    # Hide messages globally
+---
+
+On this website I will be implementing techniques that were learned from the DevOps for Data Science- book by Alex Gold.
+
+# 

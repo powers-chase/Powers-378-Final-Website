@@ -1,0 +1,16 @@
+"0","head(df)"
+"1","[1m[33mError[39m in `collect()`:[22m
+[1m[22m[33m![39m Failed to collect lazy table.
+[1mCaused by error:[22m
+[33m![39m rapi_prepare: Invalid connection
+Backtrace:
+[90m  1. [39m[1mbase[22m (local) `<fn>`(x)
+[90m  2. [39mprint.tbl_sql(x)
+[90m  3. [39moverridePrint(o$x, o$options, o$className, o$nRow, o$nCol)
+[90m  5. [39m[1mdbplyr[22m:::as.data.frame.tbl_sql(head(x, max.print))
+[90m  8. [39m[1m[94mdbplyr:::collect.tbl_sql([39m[22mx, n = n[1m[94m)[39m[22m
+[90m 11. [39mdbplyr:::db_collect.DBIConnection(...)
+[90m 13. [39m[1mduckdb[22m::dbSendQuery(con, sql)
+[90m 14. [39mduckdb (local) .local(conn, statement, ...)
+[90m 15. [39mduckdb:::rapi_prepare(conn@conn_ref, statement)
+"
