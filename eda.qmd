@@ -7,12 +7,8 @@ format:
     message: false    # Hide messages globally
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, error = FALSE, warning = FALSE)
-```
-
 ```{r}
-renv::snapshot()
+#renv::snapshot()
 ```
 
 ```{r}
@@ -23,15 +19,13 @@ library(dplyr)
 library(ggplot2)
 library(dbplyr)
 
-con <- DBI::dbConnect(
-  duckdb::duckdb(), 
-  dbdir = "my-db.duckdb"
-  )
-df <- dplyr::tbl(con, "penguins")
-```
+#con <- DBI::dbConnect(
+ # duckdb::duckdb(), 
+  #dbdir = "my-db.duckdb"
+  #)
+#df <- dplyr::tbl(con, "penguins")
 
-```{r}
-head(df)
+df <- palmerpenguins::penguins
 ```
 
 ```{r}
@@ -58,5 +52,5 @@ df %>%
 ```
 
 ```{r}
-DBI::dbDisconnect(con)
+# DBI::dbDisconnect(con)
 ```
