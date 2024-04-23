@@ -8,7 +8,7 @@ format:
 ---
 
 ```{python}
-import duckdb
+#import duckdb
 import palmerpenguins as penguins
 from pandas import get_dummies
 import numpy as np
